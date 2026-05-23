@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="Icon" href=https://brayden443.github.io/Logo-Picture/Copilot_20260512_204107.png> </link>
+    <title>Client Login</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding-top: 100px; background-color: #f0f2f5; }
+        .login-box { background: white; padding: 40px; display: inline-block; border-radius: 10px; shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        input { padding: 10px; margin: 10px; width: 200px; border: 1px solid #ddd; border-radius: 5px; }
+        button { padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <a rel="link" href="https://brayden443.github.io/Forlano-Capital-Insights-Website/Forlano_Capital_Insights.html" style="position: absolute; top: 10px; left: 10px; font-size: 20px;" >Back</a>
+    <body background="https://brayden443.github.io/Login-Page-Background/Login_Page_Background.png"></body>
+    <div class="login-box">
+        <h2>Client Portal Login</h2>
+        <input type="text" id="username" placeholder="Username"><br>
+        <input type="password" id="password" placeholder="Password"><br>
+        <button onclick="checkAccess()">Login</button>
+    </div>
+
+    <script>
+        
+    function checkAccess() {
+        const user = document.getElementById('username').value.toLowerCase();
+        const pass = document.getElementById('password').value;
+
+        // LOGIN LOGIC
+        if (user === "jack" && pass === "jack") {
+            // Take Brayden to his specific page
+            window.location.href = "https://brayden443.github.io/Client-Page/Client_Page.html";
+        } 
+        else if (user === "client_alpha" && pass === "alpha99") {
+            // Take Client Alpha to their specific page
+            window.location.href = "client_alpha.html";
+        } 
+        else if (user === "test_user" && pass === "test123") {
+            window.location.href = "test_dashboard.html";
+        }
+        else {
+            // If the name or pass doesn't match anything above
+            alert("Invalid Login. Please try again.");
+        }
+    }
+</script>
+</body>
+</html>
